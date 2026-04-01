@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #e63946;
+  color: white;
+}
+
+#nav a {
+  margin-left: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+#menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 50px;
+  background: #f1faee;
+}
+
+/* FEATURES */
+.features {
+  padding: 40px;
+  text-align: center;
+}
+
+.feature-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature-box {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* MENU */
+.menu {
+  padding: 40px;
+  text-align: center;
+}
+
+.pizza-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.pizza-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  padding: 40px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.testimonial-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.testimonial {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* BUTTON */
+button {
+  background: #e63946;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* CART */
+.cart {
+  padding: 40px;
+  background: #f1f1f1;
+}
+
+.invoice {
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px solid #333;
+  background: white;
+}
+
+.hidden {
+  display: none;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 768px) {
+
+  .pizza-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature-container,
+  .testimonial-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  #nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #e63946;
+    margin-top: 10px;
+  }
+
+  #nav.active {
+    display: flex;
+  }
+
+  #nav a {
+    padding: 10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+
+  .pizza-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 20px;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+}

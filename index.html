@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PizzaHub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <h2>🍕 PizzaHub</h2>
+
+  <div id="menu-toggle">☰</div>
+
+  <nav id="nav">
+    <a href="#">Home</a>
+    <a href="#features">Features</a>
+    <a href="#menu">Menu</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Delicious Pizza Delivered Fast</h1>
+  <p>Order your favorite pizza now!</p>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="features">
+  <h2>Why Choose Us</h2>
+
+  <div class="feature-container">
+    <div class="feature-box">🚀 Fast Delivery</div>
+    <div class="feature-box">🍅 Fresh Ingredients</div>
+    <div class="feature-box">⭐ Top Rated</div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="menu">
+  <h2>Our Pizzas</h2>
+
+  <div class="pizza-container">
+
+    <div class="pizza-card">
+      <h3>Margherita</h3>
+      <p>₹199</p>
+      <button onclick="addToCart('Margherita',199)">Add to Cart</button>
+    </div>
+
+    <div class="pizza-card">
+      <h3>Farmhouse</h3>
+      <p>₹299</p>
+      <button onclick="addToCart('Farmhouse',299)">Add to Cart</button>
+    </div>
+
+    <div class="pizza-card">
+      <h3>Peppy Paneer</h3>
+      <p>₹349</p>
+      <button onclick="addToCart('Peppy Paneer',349)">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="testimonials">
+  <h2>What Customers Say</h2>
+
+  <div class="testimonial-container">
+    <div class="testimonial">"Best pizza ever!"</div>
+    <div class="testimonial">"Super fast delivery!"</div>
+    <div class="testimonial">"Loved the taste!"</div>
+  </div>
+</section>
+
+<!-- CART -->
+<section id="cart" class="cart">
+  <h2>Your Cart</h2>
+  <ul id="cart-items"></ul>
+  <h3>Total: ₹<span id="total">0</span></h3>
+
+  <button onclick="generateInvoice()">Generate Invoice</button>
+
+  <!-- INVOICE -->
+  <div id="invoice" class="invoice hidden">
+    <h2>Invoice</h2>
+    <p id="invoice-date"></p>
+    <ul id="invoice-items"></ul>
+    <h3>Total: ₹<span id="invoice-total"></span></h3>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 PizzaHub</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
